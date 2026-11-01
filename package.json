@@ -1,0 +1,13 @@
+{
+  "name": "covim-albania",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Faqja e Covim Tiranë (distributor zyrtar i Covim Caffè)",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:root": "BASE_PATH=/ SITE_URL=https://example.com node build.mjs",
+    "serve": "node build.mjs && python3 -m http.server 8080 --directory dist",
+    "dev": "BASE_PATH=/ node build.mjs && python3 -m http.server 8080 --directory dist"
+  }
+}
