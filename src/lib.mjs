@@ -12,6 +12,7 @@ export const routePath = (lang, route, slug = '') => ROUTES[route][lang].replace
 export const url = (lang, route, slug = '') => cfg.base + routePath(lang, route, slug);
 export const absUrl = (lang, route, slug = '') => `${cfg.siteUrl}/${routePath(lang, route, slug)}`;
 export const asset = (p) => cfg.base + p;
+const BUILD = Date.now().toString(36); // ndryshon çdo build, që CSS/JS të rifreskohen te vizitorët
 
 // ---------- Produkti: emra, nën-titull, paketimi ----------
 export function pName(lang, p) { return T[lang].blendName[p.blend]; }
@@ -196,7 +197,7 @@ ${alternates}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap">
-<link rel="stylesheet" href="${asset('assets/css/styles.css')}">
+<link rel="stylesheet" href="${asset('assets/css/styles.css')}?v=${BUILD}">
 ${ld}
 </head>
 <body class="${bodyClass}" data-lang="${lang}">
@@ -206,7 +207,7 @@ ${header(lang, route)}
 ${body}
 </main>
 ${footer(lang)}
-<script src="${asset('assets/js/main.js')}" defer></script>
+<script src="${asset('assets/js/main.js')}?v=${BUILD}" defer></script>
 </body>
 </html>`;
 }

@@ -7,9 +7,9 @@ Faqe statike, pa varësi (vetëm Node.js 20+). Gjenerohen 138 faqe nga të dhën
 ## Komandat
 
 ```bash
-npm run dev      # ndërton me base "/" dhe e hap në http://localhost:8080
-npm run build    # ndërton në dist/ (base nga BASE_PATH, default /covim-albania/)
-node check-links.mjs   # kontrollon lidhjet dhe fotot e brendshme
+npm run dev      # ndërton dhe e hap në http://localhost:8080
+npm run build    # ndërton në dist/
+npm run check    # kontrollon lidhjet dhe fotot e brendshme
 ```
 
 ## Ku ndryshohen gjërat
@@ -25,17 +25,13 @@ node check-links.mjs   # kontrollon lidhjet dhe fotot e brendshme
 
 Pas çdo ndryshimi bëj `git commit` dhe `git push`: GitHub ndërton dhe publikon automatikisht.
 
-## Deploy
+## Deploy (Netlify)
 
-**GitHub Pages (falas):** Settings > Pages > Source: *GitHub Actions*. Adresa: `https://redi7334.github.io/covim-albania/`.
+`netlify.toml` e ka gati: komanda `node build.mjs && node check-links.mjs`, publikim nga `dist/`, header-a sigurie dhe cache.
 
-**Domain i vet:** në Settings > Secrets and variables > Actions > Variables vendos:
-
-- `SITE_URL` = `https://domaini-yt.al`
-- `BASE_PATH` = `/`
-- `CNAME` = `domaini-yt.al`
-
-pastaj tek Settings > Pages shto domain-in e personalizuar dhe vendos DNS sipas udhëzimeve të GitHub.
+1. Netlify > *Add new site* > *Import from Git* > zgjidh repo-n `covim-albania`.
+2. Settings i merr vetë nga `netlify.toml`. Çdo `git push` te `main` publikon automatikisht.
+3. **Domain i vet:** Domain management > *Add a domain*. Pastaj te Site configuration > Environment variables shto `SITE_URL=https://domaini-yt.al` dhe bëj *Trigger deploy*, që sitemap, canonical dhe hreflang të marrin adresën e re.
 
 ## Materiale
 

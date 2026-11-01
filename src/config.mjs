@@ -10,8 +10,8 @@ export default {
   address: '', // p.sh. 'Rruga ..., Tiranë'
   hours: '', // p.sh. 'E hënë - E shtunë, 08:00 - 18:00'
   city: 'Tiranë',
-  // URL publike e faqes (pa / në fund). Vendoset me SITE_URL gjatë build.
-  siteUrl: (process.env.SITE_URL || 'https://redi7334.github.io/covim-albania').replace(/\/$/, ''),
-  // Prefiksi i shtegut. '/covim-albania/' për GitHub Pages, '/' për domain të vet.
-  base: process.env.BASE_PATH || '/covim-albania/',
+  // URL publike e faqes (pa / në fund). Në Netlify merret nga URL; pas blerjes së domain-it vendose SITE_URL.
+  siteUrl: (process.env.SITE_URL || process.env.URL || 'https://covim-albania.netlify.app').replace(/\/$/, ''),
+  // Prefiksi i shtegut: '/' për Netlify ose domain të vet.
+  base: process.env.BASE_PATH || '/',
 };
