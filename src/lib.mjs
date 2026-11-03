@@ -18,7 +18,7 @@ const BUILD = Date.now().toString(36); // ndryshon çdo build, që CSS/JS të ri
 export function pName(lang, p) { return T[lang].blendName[p.blend]; }
 export function pSub(lang, p) {
   const t = T[lang];
-  if (p.group === 'capsule') return fmt(t.groupSub.capsule, { sys: SYSTEMS[p.system] });
+  if (p.group === 'capsule') return p.system === 'opera' ? t.groupSub.opera : fmt(t.groupSub.capsule, { sys: SYSTEMS[p.system] });
   if (p.group === 'macinato') return t.groupSub.macinato[p.grind];
   return t.groupSub[p.group];
 }

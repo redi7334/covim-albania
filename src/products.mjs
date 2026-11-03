@@ -1,6 +1,9 @@
 // Katalogu Covim. Burimi: covimcaffe.it (përshkrimet dhe intensiteti zyrtar).
 // Fusha `off: true` e fsheh produktin nga faqja (p.sh. nëse nuk disponohet në Shqipëri).
 
+// Marka e makinës me të cilën është i përputhshëm sistemi (kur ndryshon nga etiketa e sistemit)
+export const SYSTEM_COMPAT = { opera: 'Lavazza Blue®' };
+
 export const GROUPS = ['capsule', 'bustine', 'grani', 'macinato', 'speciale'];
 
 export const SYSTEMS = {
@@ -8,7 +11,7 @@ export const SYSTEMS = {
   dolcegusto: 'Dolce Gusto®',
   amodomio: 'A Modo Mio®',
   espressopoint: 'Espresso Point®',
-  firma: 'Firma®',
+  opera: 'Covim Opera',
   ese: 'ESE 44 mm',
 };
 
@@ -59,9 +62,11 @@ export const products = [
   c(25536, 'dolcegusto', 'orocrema', 9, 96, '6×16', 'arabica-robusta'),
   c(25537, 'dolcegusto', 'granbar', 8, 96, '6×16', 'arabica-robusta'),
   c(25538, 'dolcegusto', 'decaf', 8, 96, '6×16', 'arabica-robusta'),
-  // Lavazza® Firma®
-  c(25534, 'firma', 'orocrema', 9, 100, null, 'arabica-robusta'),
-  c(25535, 'firma', 'granbar', 8, 100, null, 'arabica-robusta'),
+  // Covim Opera (kapsula të përputhshme me Lavazza Blue®)
+  c('opera-orocrema', 'opera', 'orocrema', 9, 100, null, 'arabica-robusta'),
+  c('opera-granbar', 'opera', 'granbar', 8, 100, null, 'arabica-robusta'),
+  c('opera-honduras', 'opera', 'honduras', 7, 100, null, 'arabica'),
+  c('opera-decaf', 'opera', 'decaf', 6, 100, null, 'arabica-robusta'),
   // Bustina kompostueshme (ESE 44 mm)
   b(1885, 'mistero-nero', 10, 'robusta'),
   b(1882, 'orocrema', 9, 'arabica-robusta'),
@@ -92,7 +97,7 @@ export const products = [
 // Produkte të zgjedhura për ballinë
 export const FEATURED = [
   'nespresso-orocrema', 'nespresso-mistero-nero', 'dolcegusto-granbar', 'amodomio-orocrema',
-  'espressopoint-honduras', 'bustina-orocrema', 'grani-miscela-bar', 'grani-prestige',
+  'opera-orocrema', 'bustina-orocrema', 'grani-miscela-bar', 'grani-prestige',
 ];
 
 export const visible = () => products.filter((p) => !p.off);

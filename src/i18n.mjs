@@ -71,7 +71,6 @@ export const T = {
     compat: {
       kicker: 'Kapsula dhe bustina', title: 'Të përputhshme me makinat më të njohura', lead: 'Zgjidh makinën që ke dhe shiko gamën e plotë.',
       finder: 'Çfarë makine ke?', opera: 'Covim Opera', operaSub: 'Lavazza Blue®', pods: 'Bustina', podsSub: 'për Didiesse Frog', see: 'Shiko kapsulat',
-      operaNote: 'Kapsulat Covim Opera: na pyesni për disponueshmërinë.',
     },
     blends: {
       kicker: 'Blendet Covim', title: 'Gjej shijen tënde', lead: 'Nga delikatesa e Honduras-it te trupi i Mistero Nero.',
@@ -103,14 +102,14 @@ export const T = {
     footer: {
       nav: 'Navigimi', contact: 'Kontakt', follow: 'Na ndiq', tagline: 'Il piacere da scoprire.',
       official: 'Distributor zyrtar i Covim Caffè në Tiranë.',
-      trademarks: 'Nespresso®, Dolce Gusto®, A Modo Mio®, Espresso Point®, Firma® dhe Lavazza Blue® janë marka të pronarëve përkatës. Produktet Covim janë të përputhshme me këto sisteme dhe nuk lidhen me pronarët e markave.',
+      trademarks: 'Nespresso®, Dolce Gusto®, A Modo Mio®, Espresso Point® dhe Lavazza Blue® janë marka të pronarëve përkatës. Produktet Covim janë të përputhshme me këto sisteme dhe nuk lidhen me pronarët e markave.',
       rights: 'Të gjitha të drejtat e rezervuara. Covim® është markë e Covim S.p.A.', noCookies: 'Kjo faqe nuk përdor cookies gjurmuese.',
     },
     catalog: {
       kicker: 'Katalogu', title: 'Të gjitha produktet Covim', lead: 'Kapsula, bustina, kafe kokërr dhe e bluar. Për çmime dhe disponueshmëri na kontaktoni.',
       all: 'Të gjitha', search: 'Kërko produkt…', system: 'Sistemi', blend: 'Miscela', sort: 'Rendit', sortDefault: 'Sipas katalogut', sortHigh: 'Intensiteti: më i larti', sortLow: 'Intensiteti: më i ulëti',
       count: '{n} produkte', countOne: '1 produkt', empty: 'Asnjë produkt nuk përputhet me filtrat.', emptyCta: 'Na pyet drejtpërdrejt', reset: 'Pastro filtrat',
-      note: 'Nuk e gjen çfarë kërkon? Na pyesni, kemi edhe modele të tjera, përfshirë kapsulat Covim Opera.',
+      note: 'Nuk e gjen çfarë kërkon? Na pyesni, kemi edhe modele të tjera.',
     },
     product: {
       back: 'Katalogu', system: 'Sistemi', intensity: 'Intensiteti', pack: 'Përmbajtja', mix: 'Miscela', grind: 'Bluarja', organic: 'Organike',
@@ -120,7 +119,7 @@ export const T = {
     },
     groups: { capsule: 'Kapsula', bustine: 'Bustina', grani: 'Kafe kokërr', macinato: 'Kafe e bluar', speciale: 'Pije speciale' },
     groupSub: {
-      capsule: 'Kapsula të përputhshme me {sys}', bustine: 'Bustina kompostueshme ESE 44 mm', grani: 'Kafe në kokërr', speciale: 'Kapsula të përputhshme me Dolce Gusto®',
+      capsule: 'Kapsula të përputhshme me {sys}', opera: 'Kapsula Covim Opera, të përputhshme me Lavazza Blue®', bustine: 'Bustina kompostueshme ESE 44 mm', grani: 'Kafe në kokërr', speciale: 'Kapsula të përputhshme me Dolce Gusto®',
       macinato: { moka: 'Kafe e bluar për moka', espresso: 'Kafe e bluar për espresso' },
     },
     units: { capsule: 'kapsula', pod: 'bustina', tin: 'kanaçe', pack: 'paketim', bipack: 'bipack' },
@@ -159,7 +158,7 @@ export const T = {
       faq: [
         { q: 'A është vërtet falas pajisja?', a: 'Pajisja jepet falas në përdorim, me furnizim të rregullt me kafe Covim. Kushtet i sqarojmë personalisht para se të vendosni.' },
         { q: 'Cilat makina ofroni?', a: 'Didiesse Frog Revolution për bustina dhe Lavazza Blue Classy Compact për kapsulat Covim Opera. Modelet varen nga disponueshmëria; na pyesni.' },
-        { q: 'Mund të përdor kapsulat e makinës që kam tashmë?', a: 'Po. Kemi kapsula të përputhshme me Nespresso® Original, Dolce Gusto®, A Modo Mio®, Espresso Point® dhe Firma®.' },
+        { q: 'Mund të përdor kapsulat e makinës që kam tashmë?', a: 'Po. Kemi kapsula të përputhshme me Nespresso® Original, Dolce Gusto®, A Modo Mio®, Espresso Point® dhe Lavazza Blue® (Covim Opera).' },
         { q: 'Si mund të porosis?', a: 'Na telefononi në 069 330 3656 ose na shkruani në WhatsApp. Në këtë faqe nuk ka porosi online: ju ndihmojmë personalisht.' },
         { q: 'Furnizoni vetëm në Tiranë?', a: 'Jemi distributor zyrtar në Tiranë. Për zona të tjera na kontaktoni dhe shohim së bashku.' },
       ],
@@ -230,7 +229,6 @@ export const T = {
     compat: {
       kicker: 'Capsule e cialde', title: 'Compatibili con le macchine più diffuse', lead: 'Scegli la macchina che hai e scopri la gamma completa.',
       finder: 'Che macchina hai?', opera: 'Covim Opera', operaSub: 'Lavazza Blue®', pods: 'Cialde', podsSub: 'per Didiesse Frog', see: 'Vedi le capsule',
-      operaNote: 'Capsule Covim Opera: chiedici la disponibilità.',
     },
     blends: {
       kicker: 'Le miscele Covim', title: 'Trova il tuo gusto', lead: 'Dalla delicatezza dell\'Honduras al corpo del Mistero Nero.',
@@ -262,14 +260,14 @@ export const T = {
     footer: {
       nav: 'Navigazione', contact: 'Contatti', follow: 'Seguici', tagline: 'Il piacere da scoprire.',
       official: 'Distributore ufficiale di Covim Caffè a Tirana.',
-      trademarks: 'Nespresso®, Dolce Gusto®, A Modo Mio®, Espresso Point®, Firma® e Lavazza Blue® sono marchi dei rispettivi proprietari. I prodotti Covim sono compatibili con questi sistemi e non sono affiliati ai titolari dei marchi.',
+      trademarks: 'Nespresso®, Dolce Gusto®, A Modo Mio®, Espresso Point® e Lavazza Blue® sono marchi dei rispettivi proprietari. I prodotti Covim sono compatibili con questi sistemi e non sono affiliati ai titolari dei marchi.',
       rights: 'Tutti i diritti riservati. Covim® è un marchio di Covim S.p.A.', noCookies: 'Questo sito non usa cookie di tracciamento.',
     },
     catalog: {
       kicker: 'Catalogo', title: 'Tutti i prodotti Covim', lead: 'Capsule, cialde, caffè in grani e macinato. Per prezzi e disponibilità contattaci.',
       all: 'Tutti', search: 'Cerca un prodotto…', system: 'Sistema', blend: 'Miscela', sort: 'Ordina', sortDefault: 'Come in catalogo', sortHigh: 'Intensità: più alta', sortLow: 'Intensità: più bassa',
       count: '{n} prodotti', countOne: '1 prodotto', empty: 'Nessun prodotto corrisponde ai filtri.', emptyCta: 'Chiedici direttamente', reset: 'Azzera i filtri',
-      note: 'Non trovi quello che cerchi? Chiedici: abbiamo anche altri modelli, comprese le capsule Covim Opera.',
+      note: 'Non trovi quello che cerchi? Chiedici: abbiamo anche altri modelli.',
     },
     product: {
       back: 'Catalogo', system: 'Sistema', intensity: 'Intensità', pack: 'Confezione', mix: 'Miscela', grind: 'Macinatura', organic: 'Biologico',
@@ -279,7 +277,7 @@ export const T = {
     },
     groups: { capsule: 'Capsule', bustine: 'Cialde', grani: 'Caffè in grani', macinato: 'Caffè macinato', speciale: 'Specialità' },
     groupSub: {
-      capsule: 'Capsule compatibili {sys}', bustine: 'Cialde compostabili ESE 44 mm', grani: 'Caffè in grani', speciale: 'Capsule compatibili Dolce Gusto®',
+      capsule: 'Capsule compatibili {sys}', opera: 'Capsule Covim Opera compatibili Lavazza Blue®', bustine: 'Cialde compostabili ESE 44 mm', grani: 'Caffè in grani', speciale: 'Capsule compatibili Dolce Gusto®',
       macinato: { moka: 'Caffè macinato per moka', espresso: 'Caffè macinato per espresso' },
     },
     units: { capsule: 'capsule', pod: 'cialde', tin: 'lattina', pack: 'confezione', bipack: 'bipack' },
@@ -318,7 +316,7 @@ export const T = {
       faq: [
         { q: 'La macchina è davvero gratis?', a: 'La macchina è concessa in comodato gratuito, con fornitura regolare di caffè Covim. Le condizioni si chiariscono di persona prima di decidere.' },
         { q: 'Quali macchine offrite?', a: 'Didiesse Frog Revolution per cialde e Lavazza Blue Classy Compact per capsule Covim Opera. I modelli dipendono dalla disponibilità: chiedici.' },
-        { q: 'Posso usare le capsule della macchina che ho già?', a: 'Sì. Abbiamo capsule compatibili Nespresso® Original, Dolce Gusto®, A Modo Mio®, Espresso Point® e Firma®.' },
+        { q: 'Posso usare le capsule della macchina che ho già?', a: 'Sì. Abbiamo capsule compatibili Nespresso® Original, Dolce Gusto®, A Modo Mio®, Espresso Point® e Lavazza Blue® (Covim Opera).' },
         { q: 'Come posso ordinare?', a: 'Chiamaci al +355 69 330 3656 o scrivici su WhatsApp. Il sito non ha ordini online: ti aiutiamo di persona.' },
         { q: 'Servite solo Tirana?', a: 'Siamo distributore ufficiale a Tirana. Per altre zone contattaci e valutiamo insieme.' },
       ],
@@ -389,7 +387,6 @@ export const T = {
     compat: {
       kicker: 'Capsules and pods', title: 'Compatible with the most popular machines', lead: 'Pick the machine you have and see the full range.',
       finder: 'Which machine do you have?', opera: 'Covim Opera', operaSub: 'Lavazza Blue®', pods: 'Pods', podsSub: 'for Didiesse Frog', see: 'See the capsules',
-      operaNote: 'Covim Opera capsules: ask us about availability.',
     },
     blends: {
       kicker: 'Covim blends', title: 'Find your taste', lead: 'From the delicacy of Honduras to the body of Mistero Nero.',
@@ -421,14 +418,14 @@ export const T = {
     footer: {
       nav: 'Navigation', contact: 'Contact', follow: 'Follow us', tagline: 'Il piacere da scoprire.',
       official: 'Official Covim Caffè distributor in Tirana.',
-      trademarks: 'Nespresso®, Dolce Gusto®, A Modo Mio®, Espresso Point®, Firma® and Lavazza Blue® are trademarks of their respective owners. Covim products are compatible with these systems and are not affiliated with the trademark owners.',
+      trademarks: 'Nespresso®, Dolce Gusto®, A Modo Mio®, Espresso Point® and Lavazza Blue® are trademarks of their respective owners. Covim products are compatible with these systems and are not affiliated with the trademark owners.',
       rights: 'All rights reserved. Covim® is a trademark of Covim S.p.A.', noCookies: 'This site does not use tracking cookies.',
     },
     catalog: {
       kicker: 'Catalog', title: 'All Covim products', lead: 'Capsules, pods, coffee beans and ground coffee. Contact us for prices and availability.',
       all: 'All', search: 'Search a product…', system: 'System', blend: 'Blend', sort: 'Sort', sortDefault: 'Catalog order', sortHigh: 'Intensity: highest', sortLow: 'Intensity: lowest',
       count: '{n} products', countOne: '1 product', empty: 'No product matches your filters.', emptyCta: 'Ask us directly', reset: 'Clear filters',
-      note: 'Can\'t find what you need? Ask us: we have other models too, including Covim Opera capsules.',
+      note: 'Can\'t find what you need? Ask us: we have other models too.',
     },
     product: {
       back: 'Catalog', system: 'System', intensity: 'Intensity', pack: 'Pack', mix: 'Blend', grind: 'Grind', organic: 'Organic',
@@ -438,7 +435,7 @@ export const T = {
     },
     groups: { capsule: 'Capsules', bustine: 'Pods', grani: 'Coffee beans', macinato: 'Ground coffee', speciale: 'Specialty drinks' },
     groupSub: {
-      capsule: 'Capsules compatible with {sys}', bustine: 'Compostable ESE 44 mm pods', grani: 'Coffee beans', speciale: 'Capsules compatible with Dolce Gusto®',
+      capsule: 'Capsules compatible with {sys}', opera: 'Covim Opera capsules compatible with Lavazza Blue®', bustine: 'Compostable ESE 44 mm pods', grani: 'Coffee beans', speciale: 'Capsules compatible with Dolce Gusto®',
       macinato: { moka: 'Ground coffee for moka pot', espresso: 'Ground coffee for espresso' },
     },
     units: { capsule: 'capsules', pod: 'pods', tin: 'tin', pack: 'pack', bipack: 'bipack' },
@@ -477,7 +474,7 @@ export const T = {
       faq: [
         { q: 'Is the machine really free?', a: 'The machine is provided free on loan, with regular supply of Covim coffee. We explain the terms in person before you decide.' },
         { q: 'Which machines do you offer?', a: 'Didiesse Frog Revolution for pods and Lavazza Blue Classy Compact for Covim Opera capsules. Models depend on availability: ask us.' },
-        { q: 'Can I use capsules for the machine I already own?', a: 'Yes. We have capsules compatible with Nespresso® Original, Dolce Gusto®, A Modo Mio®, Espresso Point® and Firma®.' },
+        { q: 'Can I use capsules for the machine I already own?', a: 'Yes. We have capsules compatible with Nespresso® Original, Dolce Gusto®, A Modo Mio®, Espresso Point® and Lavazza Blue® (Covim Opera).' },
         { q: 'How can I order?', a: 'Call us on +355 69 330 3656 or message us on WhatsApp. There is no online checkout: we help you personally.' },
         { q: 'Do you only supply Tirana?', a: 'We are the official distributor in Tirana. For other areas, contact us and we will see together.' },
       ],

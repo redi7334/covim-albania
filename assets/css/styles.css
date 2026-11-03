@@ -152,10 +152,8 @@ button { cursor: pointer; }
 .tile img { width: 100%; max-width: 150px; aspect-ratio: 1; object-fit: contain; margin-bottom: 8px; transition: transform .3s; }
 .tile strong { font: 700 1.05rem/1.2 var(--f-head); } .tile span { color: rgba(255, 255, 255, .6); font-size: .86rem; }
 .tile:hover { background: var(--red); transform: translateY(-4px); } .tile:hover span { color: rgba(255, 255, 255, .9); } .tile:hover img { transform: scale(1.08) rotate(-3deg); }
-.tile__opera { width: 100%; max-width: 150px; aspect-ratio: 1; display: grid; place-items: center; margin-bottom: 8px; }
-.tile__opera svg { height: 100%; width: auto; }
 @media (min-width: 640px) { .tiles { grid-template-columns: repeat(3, 1fr); } }
-@media (min-width: 1000px) { .tiles { grid-template-columns: repeat(7, 1fr); } .tile { padding-inline: 10px; } }
+@media (min-width: 1000px) { .tiles { grid-template-columns: repeat(6, 1fr); } .tile { padding-inline: 10px; } }
 
 /* ---------- blendet ---------- */
 .blend-row { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }

@@ -1,5 +1,5 @@
 import { T } from './i18n.mjs';
-import { products, visible, bySlug, related, FEATURED, SYSTEMS, GROUPS } from './products.mjs';
+import { products, visible, bySlug, related, FEATURED, SYSTEMS, SYSTEM_COMPAT, GROUPS } from './products.mjs';
 import { icon, heroArt, frogArt, classyArt, beanPattern } from './art.mjs';
 import {
   cfg, esc, fmt, url, absUrl, asset, layout, productCard, sectionHead, waLink, waButton, telLink, meter,
@@ -102,7 +102,7 @@ export function home(lang) {
     ['dolcegusto', 'dolcegusto-granbar', 'Dolce Gusto®', ''],
     ['amodomio', 'amodomio-orocrema', 'A Modo Mio®', ''],
     ['espressopoint', 'espressopoint-orocrema', 'Espresso Point®', ''],
-    ['firma', 'firma-orocrema', 'Firma®', ''],
+    ['opera', 'opera-orocrema', 'Covim Opera', 'Lavazza Blue®'],
   ].map(([sys, slug, name, sub]) => `<a class="tile reveal" href="${catalogUrl}?s=${sys}"><img src="${asset(imgOf(slug))}" alt="" width="200" height="200" loading="lazy"><strong>${name}</strong>${sub ? `<span>${sub}</span>` : '<span>&nbsp;</span>'}</a>`).join('');
   const compat = `<section class="compat section section--dark">
   <div class="wrap">
@@ -111,7 +111,6 @@ export function home(lang) {
     <div class="tiles">
       ${tiles}
       <a class="tile reveal" href="${catalogUrl}?g=bustine"><img src="${asset(imgOf('bustina-orocrema'))}" alt="" width="200" height="200" loading="lazy"><strong>${t.compat.pods}</strong><span>${t.compat.podsSub}</span></a>
-      <a class="tile tile--opera reveal" href="${waLink(t.compat.operaNote)}" target="_blank" rel="noopener"><span class="tile__opera" aria-hidden="true">${classyArt()}</span><strong>${t.compat.opera}</strong><span>${t.compat.operaSub}</span></a>
     </div>
   </div>
 </section>`;
@@ -210,7 +209,7 @@ export function catalog(lang) {
   const counts = Object.fromEntries(GROUPS.map((g) => [g, items.filter((p) => p.group === g).length]));
   const tabs = [`<button type="button" class="tab is-on" data-g="all">${t.catalog.all} <small>${items.length}</small></button>`]
     .concat(GROUPS.filter((g) => counts[g]).map((g) => `<button type="button" class="tab" data-g="${g}">${t.groups[g]} <small>${counts[g]}</small></button>`)).join('');
-  const sysChips = ['nespresso', 'dolcegusto', 'amodomio', 'espressopoint', 'firma'].map((s) => `<button type="button" class="chip" data-s="${s}">${SYSTEMS[s]}</button>`).join('');
+  const sysChips = ['nespresso', 'dolcegusto', 'amodomio', 'espressopoint', 'opera'].map((s) => `<button type="button" class="chip" data-s="${s}">${SYSTEMS[s]}</button>`).join('');
   const blendChips = t.blends.list.map((b) => `<button type="button" class="chip" data-b="${b}">${t.blendName[b]}</button>`).join('');
 
   const body = `<section class="page-hero page-hero--yellow">
@@ -255,7 +254,7 @@ export function product(lang, p) {
   const sub = pSub(lang, p);
   const msg = fmt(pt.msg, { name: pFull(lang, p) + ` (${pPack(lang, p)})` });
   const specs = [
-    p.system && p.group !== 'speciale' ? [pt.system, SYSTEMS[p.system]] : p.group === 'speciale' ? [pt.system, SYSTEMS.dolcegusto] : null,
+    p.system && p.group !== 'speciale' ? [pt.system, SYSTEM_COMPAT[p.system] ? `${SYSTEMS[p.system]} (${SYSTEM_COMPAT[p.system]})` : SYSTEMS[p.system]] : p.group === 'speciale' ? [pt.system, SYSTEMS.dolcegusto] : null,
     [pt.pack, pPack(lang, p)],
     p.mix ? [pt.mix, t.mixLabel[p.mix]] : null,
     p.grind ? [pt.grind, t.grindLabel[p.grind]] : null,
@@ -282,7 +281,7 @@ export function product(lang, p) {
           <a class="btn btn--wa btn--lg" href="${waLink(msg)}" target="_blank" rel="noopener">${icon('whatsapp')}<span>${pt.ask}</span></a>
           <a class="btn btn--ink btn--lg" href="${telLink()}">${icon('phone')}<span>${pt.callUs} ${cfg.phone}</span></a>
         </div>
-        ${p.system && p.group !== 'speciale' && p.group !== 'bustine' ? `<p class="pdp__legal">${fmt(pt.compatNote, { sys: SYSTEMS[p.system] })}</p>` : ''}
+        ${p.system && p.group !== 'speciale' && p.group !== 'bustine' ? `<p class="pdp__legal">${fmt(pt.compatNote, { sys: SYSTEM_COMPAT[p.system] || SYSTEMS[p.system] })}</p>` : ''}
       </div>
     </div>
   </div>
