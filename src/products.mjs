@@ -21,9 +21,9 @@ const c = (id, system, blend, intensity, qty, per, mix) => ({
   pack: { qty, per, unit: 'capsule' },
   slug: `${system}-${blend}`,
 });
-const b = (id, blend, intensity, mix) => ({
+const b = (id, blend, intensity, mix, qty = 150) => ({
   id, group: 'bustine', system: 'ese', blend, intensity, mix,
-  pack: { qty: 200, per: '4×50', unit: 'pod' },
+  pack: { qty, unit: 'pod' },
   slug: `bustina-${blend}`,
 });
 const g = (id, blend, intensity, kg, mix, extra = {}) => ({
@@ -71,8 +71,8 @@ export const products = [
   b(1885, 'mistero-nero', 10, 'robusta'),
   b(1882, 'orocrema', 9, 'arabica-robusta'),
   b(1883, 'granbar', 8, 'arabica-robusta'),
-  b(1884, 'honduras', 7, 'arabica'),
-  b(1886, 'decaf', 6, 'arabica-robusta'),
+  b(1884, 'honduras', 7, 'arabica', 50),
+  b(1886, 'decaf', 6, 'arabica-robusta', 50),
   // Kafe në kokërr
   g(8531, 'intenso', 10, { kg: 1 }, 'robusta'),
   g(87586, 'prestige', 8, { kg: 1 }, 'arabica-robusta'),
