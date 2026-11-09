@@ -194,7 +194,7 @@ export function contactBand(lang) {
       <p class="lead">${t.contactBand.lead}</p>
       <div class="btn-row">
         <a class="btn btn--white btn--lg" href="${telLink()}">${icon('phone')}<span>${t.common.callNow}</span></a>
-        ${waButton(lang, '', t.common.whatsapp, 'btn btn--wa btn--lg')}
+        ${waButton(lang, t.common.waHello, t.common.whatsapp, 'btn btn--wa btn--lg')}
       </div>
     </div>
     <div class="reveal">${contactForm(lang)}</div>
@@ -231,7 +231,7 @@ export function catalog(lang) {
     <div class="grid" data-grid>${items.map((p, i) => productCard(lang, p, { lazy: i > 7 })).join('')}</div>
     <div class="empty" data-empty hidden>
       <p>${t.catalog.empty}</p>
-      <div class="btn-row center"><button type="button" class="btn btn--ink" data-reset>${t.catalog.reset}</button>${waButton(lang, '', t.catalog.emptyCta)}</div>
+      <div class="btn-row center"><button type="button" class="btn btn--ink" data-reset>${t.catalog.reset}</button>${waButton(lang, t.common.waHello, t.catalog.emptyCta)}</div>
     </div>
     <p class="catalog__note">${t.catalog.note}</p>
   </div>
@@ -296,7 +296,7 @@ export function product(lang, p) {
   return layout({
     lang, route: 'product', slug: p.slug,
     meta: { title: `${name} · ${sub} | ${t.meta.siteName}`, desc: `${pFull(lang, p)}. ${pNote(lang, p)} ${pt.priceNote}` },
-    ogImage: p.img, body,
+    ogImage: p.img, body, waText: msg,
     jsonld: [{
       '@context': 'https://schema.org', '@type': 'Product', name: pFull(lang, p), sku: String(p.id),
       image: `${cfg.siteUrl}/${p.img}`, description: pNote(lang, p), brand: { '@type': 'Brand', name: 'Covim' },
@@ -322,7 +322,7 @@ export function business(lang) {
   const faq = `<section class="section"><div class="wrap wrap--narrow">${sectionHead('', b.faqTitle)}
     <div class="faq">${b.faq.map((f) => `<details class="reveal"><summary>${f.q}${icon('chevron')}</summary><p>${f.a}</p></details>`).join('')}</div></div></section>`;
   return layout({
-    lang, route: 'business', meta: t.meta.business,
+    lang, route: 'business', meta: t.meta.business, waText: b.ctaMsg,
     jsonld: [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: b.faq.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }],
     body: [hero, segs, offerSection(lang, { heading: false }), benefits, faq, contactBand(lang)].join('\n'),
   });
@@ -349,7 +349,7 @@ export function contact(lang) {
   const c = t.contact;
   const rows = [
     [icon('phone'), c.phone, `<a href="${telLink()}">${cfg.phone}</a>`],
-    [icon('whatsapp'), c.whatsapp, `<a href="${waLink('')}" target="_blank" rel="noopener">${cfg.phone}</a>`],
+    [icon('whatsapp'), c.whatsapp, `<a href="${waLink(t.common.waHello)}" target="_blank" rel="noopener">${cfg.phone}</a>`],
     [icon('instagram'), c.instagram, `<a href="https://instagram.com/${cfg.instagram}" target="_blank" rel="noopener">@${cfg.instagram}</a>`],
     [icon('pin'), cfg.address ? c.address : c.city, esc(cfg.address || cfg.city)],
     cfg.email ? [icon('mail'), c.email, `<a href="mailto:${cfg.email}">${cfg.email}</a>`] : null,

@@ -44,7 +44,7 @@ export const T = {
     common: {
       whatsapp: 'Shkruaj në WhatsApp', callNow: 'Telefono tani', instagram: 'Instagram', viewCatalog: 'Shiko katalogun',
       viewAll: 'Të gjitha produktet', learnMore: 'Mëso më shumë', details: 'Detajet', askOffer: 'Kërko ofertë', priceOnRequest: 'Çmimi sipas ofertës',
-      official: 'Distributor zyrtar · Tiranë', prev: 'Para', next: 'Pas', free: 'FALAS', intensity: 'Intensiteti', of10: 'nga 10',
+      official: 'Distributor zyrtar · Tiranë', waHello: 'Përshëndetje! Kam një pyetje për produktet Covim.', prev: 'Para', next: 'Pas', free: 'FALAS', intensity: 'Intensiteti', of10: 'nga 10',
     },
     hero: {
       kicker: 'COVIM CAFFÈ · GENOVA', title: 'Espresso italian,<br>si në bar.', sub: 'Tani edhe në zyrën dhe shtëpinë tënde.',
@@ -107,7 +107,7 @@ export const T = {
     },
     catalog: {
       kicker: 'Katalogu', title: 'Të gjitha produktet Covim', lead: 'Kapsula, bustina, kafe kokërr dhe e bluar. Për çmime dhe disponueshmëri na kontaktoni.',
-      all: 'Të gjitha', search: 'Kërko produkt…', system: 'Sistemi', blend: 'Miscela', sort: 'Rendit', sortDefault: 'Sipas katalogut', sortHigh: 'Intensiteti: më i larti', sortLow: 'Intensiteti: më i ulëti',
+      all: 'Të gjitha', search: 'Kërko produkt…', system: 'Sistemi', blend: 'Miscela', sort: 'Rendit', sortDefault: 'Renditja', sortHigh: 'Më i fortë', sortLow: 'Më i butë',
       count: '{n} produkte', countOne: '1 produkt', empty: 'Asnjë produkt nuk përputhet me filtrat.', emptyCta: 'Na pyet drejtpërdrejt', reset: 'Pastro filtrat',
       note: 'Nuk e gjen çfarë kërkon? Na pyesni, kemi edhe modele të tjera.',
     },
@@ -202,7 +202,7 @@ export const T = {
     common: {
       whatsapp: 'Scrivici su WhatsApp', callNow: 'Chiama ora', instagram: 'Instagram', viewCatalog: 'Vedi il catalogo',
       viewAll: 'Tutti i prodotti', learnMore: 'Scopri di più', details: 'Dettagli', askOffer: 'Richiedi offerta', priceOnRequest: 'Prezzo su richiesta',
-      official: 'Distributore ufficiale · Tirana', prev: 'Indietro', next: 'Avanti', free: 'GRATIS', intensity: 'Intensità', of10: 'su 10',
+      official: 'Distributore ufficiale · Tirana', waHello: 'Buongiorno! Ho una domanda sui prodotti Covim.', prev: 'Indietro', next: 'Avanti', free: 'GRATIS', intensity: 'Intensità', of10: 'su 10',
     },
     hero: {
       kicker: 'COVIM CAFFÈ · GENOVA', title: 'Espresso italiano,<br>come al bar.', sub: 'Ora anche nel tuo ufficio e a casa tua.',
@@ -265,7 +265,7 @@ export const T = {
     },
     catalog: {
       kicker: 'Catalogo', title: 'Tutti i prodotti Covim', lead: 'Capsule, cialde, caffè in grani e macinato. Per prezzi e disponibilità contattaci.',
-      all: 'Tutti', search: 'Cerca un prodotto…', system: 'Sistema', blend: 'Miscela', sort: 'Ordina', sortDefault: 'Come in catalogo', sortHigh: 'Intensità: più alta', sortLow: 'Intensità: più bassa',
+      all: 'Tutti', search: 'Cerca un prodotto…', system: 'Sistema', blend: 'Miscela', sort: 'Ordina', sortDefault: 'Ordine', sortHigh: 'Più intenso', sortLow: 'Più delicato',
       count: '{n} prodotti', countOne: '1 prodotto', empty: 'Nessun prodotto corrisponde ai filtri.', emptyCta: 'Chiedici direttamente', reset: 'Azzera i filtri',
       note: 'Non trovi quello che cerchi? Chiedici: abbiamo anche altri modelli.',
     },
@@ -360,7 +360,7 @@ export const T = {
     common: {
       whatsapp: 'Message on WhatsApp', callNow: 'Call now', instagram: 'Instagram', viewCatalog: 'View the catalog',
       viewAll: 'All products', learnMore: 'Learn more', details: 'Details', askOffer: 'Request a quote', priceOnRequest: 'Price on request',
-      official: 'Official distributor · Tirana', prev: 'Previous', next: 'Next', free: 'FREE', intensity: 'Intensity', of10: 'out of 10',
+      official: 'Official distributor · Tirana', waHello: 'Hello! I have a question about Covim products.', prev: 'Previous', next: 'Next', free: 'FREE', intensity: 'Intensity', of10: 'out of 10',
     },
     hero: {
       kicker: 'COVIM CAFFÈ · GENOA', title: 'Italian espresso,<br>just like at the bar.', sub: 'Now in your office and at home too.',
@@ -423,7 +423,7 @@ export const T = {
     },
     catalog: {
       kicker: 'Catalog', title: 'All Covim products', lead: 'Capsules, pods, coffee beans and ground coffee. Contact us for prices and availability.',
-      all: 'All', search: 'Search a product…', system: 'System', blend: 'Blend', sort: 'Sort', sortDefault: 'Catalog order', sortHigh: 'Intensity: highest', sortLow: 'Intensity: lowest',
+      all: 'All', search: 'Search a product…', system: 'System', blend: 'Blend', sort: 'Sort', sortDefault: 'Order', sortHigh: 'Strongest', sortLow: 'Mildest',
       count: '{n} products', countOne: '1 product', empty: 'No product matches your filters.', emptyCta: 'Ask us directly', reset: 'Clear filters',
       note: 'Can\'t find what you need? Ask us: we have other models too.',
     },

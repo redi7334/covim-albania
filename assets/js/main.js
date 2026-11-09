@@ -28,16 +28,23 @@
 
   // ---------- reveal ----------
   let pending = $$('.reveal');
+  // pas animacionit klasa reveal hiqet, që efektet hover të kartave të punojnë normalisht
+  const settle = (el) => {
+    let done = false;
+    const end = () => { if (done) return; done = true; el.classList.remove('reveal', 'is-in'); el.style.transitionDelay = ''; };
+    el.addEventListener('transitionend', (e) => { if (e.target === el && e.propertyName === 'opacity') end(); });
+    setTimeout(end, 3000);
+  };
   const revealCheck = () => {
     const limit = innerHeight * 0.92;
     pending = pending.filter((el) => {
-      if (el.getBoundingClientRect().top < limit) { el.classList.add('is-in'); return false; }
+      if (el.getBoundingClientRect().top < limit) { el.classList.add('is-in'); settle(el); return false; }
       return true;
     });
     if (!pending.length) { removeEventListener('scroll', onScroll); removeEventListener('resize', onScroll); }
   };
   let ticking = false;
-  const onScroll = () => { if (!ticking) { ticking = true; requestAnimationFrame(() => { ticking = false; revealCheck(); }); } };
+  const onScroll = () => { if (!ticking) { ticking = true; setTimeout(() => { ticking = false; revealCheck(); }, 40); } };
   if (reduce) pending.forEach((el) => el.classList.add('is-in'));
   else {
     pending.forEach((el, i) => { el.style.transitionDelay = `${(i % 4) * 60}ms`; });

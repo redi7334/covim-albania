@@ -130,12 +130,13 @@ function header(lang, route) {
 // Vendoset nga build para renderimit të çdo faqeje: (lang) => url i faqes ekuivalente.
 export const routeUrlFor = { current: null };
 
-function footer(lang) {
+function footer(lang, waText = '') {
   const t = T[lang];
+  const wa = waLink(waText || t.common.waHello);
   const f = t.footer;
   const contactRows = [
     `<li><a href="${telLink()}">${icon('phone', 'ic ic--sm')}${cfg.phone}</a></li>`,
-    `<li><a href="${waLink('')}" target="_blank" rel="noopener">${icon('whatsapp', 'ic ic--sm')}WhatsApp</a></li>`,
+    `<li><a href="${wa}" target="_blank" rel="noopener">${icon('whatsapp', 'ic ic--sm')}WhatsApp</a></li>`,
     `<li><a href="https://instagram.com/${cfg.instagram}" target="_blank" rel="noopener">${icon('instagram', 'ic ic--sm')}@${cfg.instagram}</a></li>`,
     cfg.email ? `<li><a href="mailto:${cfg.email}">${icon('mail', 'ic ic--sm')}${cfg.email}</a></li>` : '',
     `<li><span>${icon('pin', 'ic ic--sm')}${cfg.address ? esc(cfg.address) : cfg.city}</span></li>`,
@@ -161,11 +162,11 @@ function footer(lang) {
 </footer>
 <div class="dock" role="group">
   <a class="dock__call" href="${telLink()}">${icon('phone')}<span>${t.nav.call}</span></a>
-  <a class="dock__wa" href="${waLink('')}" target="_blank" rel="noopener">${icon('whatsapp')}<span>WhatsApp</span></a>
+  <a class="dock__wa" href="${wa}" target="_blank" rel="noopener">${icon('whatsapp')}<span>WhatsApp</span></a>
 </div>`;
 }
 
-export function layout({ lang, route, slug = '', meta, body, jsonld = [], ogImage = 'assets/img/brand/og.jpg', bodyClass = '', noindex = false }) {
+export function layout({ lang, route, slug = '', meta, body, jsonld = [], ogImage = 'assets/img/brand/og.jpg', bodyClass = '', noindex = false, waText = '' }) {
   const t = T[lang];
   const alternates = LANGS.map((l) => `<link rel="alternate" hreflang="${l}" href="${absUrl(l, route, slug)}">`).join('\n') +
     `\n<link rel="alternate" hreflang="x-default" href="${absUrl('sq', route, slug)}">`;
@@ -206,7 +207,7 @@ ${header(lang, route)}
 <main id="main">
 ${body}
 </main>
-${footer(lang)}
+${footer(lang, waText)}
 <script src="${asset('assets/js/main.js')}?v=${BUILD}" defer></script>
 </body>
 </html>`;
