@@ -77,6 +77,7 @@ export const products = [
   g(8531, 'intenso', 10, { kg: 1 }, 'robusta'),
   g(87586, 'prestige', 8, { kg: 1 }, 'arabica-robusta'),
   g(8534, 'miscela-bar', 8, { kg: 1 }, 'arabica-robusta'),
+  g('orocrema-grani', 'orocrema', 10, { kg: 1 }, 'arabica-robusta'),
   g(25182, 'honduras', 7, { g: 500 }, 'arabica'),
   g(8547, 'decaf', 7, { g: 500 }, 'arabica-robusta'),
   // Kafe e bluar
@@ -113,5 +114,7 @@ export function related(p, n = 4) {
   const sameGroup = visible().filter((x) => x.group === p.group && x.system === p.system && x.slug !== p.slug);
   const rest = visible().filter((x) => x.group === p.group && x.slug !== p.slug);
   const seen = new Set();
-  return [...sameBlend, ...sameGroup, ...rest].filter((x) => !seen.has(x.slug) && seen.add(x.slug)).slice(0, n);
+  // kafe kokërr/e bluar: së pari produktet e të njëjtit lloj, jo kapsulat e së njëjtës miscelë
+  const order = ['grani', 'macinato'].includes(p.group) ? [...rest, ...sameBlend] : [...sameBlend, ...sameGroup, ...rest];
+  return order.filter((x) => !seen.has(x.slug) && seen.add(x.slug)).slice(0, n);
 }

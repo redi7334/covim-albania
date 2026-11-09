@@ -143,14 +143,14 @@ export function home(lang) {
   <div class="wrap center"><a class="btn btn--ink btn--lg" href="${catalogUrl}">${t.featured.cta}${arrow}</a></div>
 </section>`;
 
-  const bagSlugs = ['grani-intenso', 'grani-prestige', 'grani-miscela-bar', 'grani-honduras', 'grani-decaf'];
+  const bagSlugs = ['grani-intenso', 'grani-prestige', 'grani-miscela-bar', 'grani-orocrema', 'grani-honduras', 'grani-decaf'];
   const beans = `<section class="beans section">
   <div class="wrap beans__grid">
     <div class="beans__text reveal">
       <p class="kicker kicker--ink">${t.beans.kicker}</p>
       <h2 class="h2 h2--xl">${t.beans.title}</h2>
       <p>${t.beans.lead}</p>
-      <ul class="chips-static">${['Miscela Bar', 'Intenso', 'Prestige', 'Honduras 100% Arabica', 'Decaffeinato'].map((x) => `<li>${x}</li>`).join('')}</ul>
+      <ul class="chips-static">${['Miscela Bar', 'Orocrema', 'Intenso', 'Prestige', 'Honduras 100% Arabica', 'Decaffeinato'].map((x) => `<li>${x}</li>`).join('')}</ul>
       <a class="btn btn--ink btn--lg" href="${catalogUrl}?g=grani">${t.beans.cta}${arrow}</a>
     </div>
     <div class="shelf reveal">${bagSlugs.map((s, i) => { const p = bySlug(s); return `<a href="${url(lang, 'product', s)}" class="bag bag--${i + 1}"><img src="${asset(p.img)}" alt="${esc(pFull(lang, p))}" width="300" height="300" loading="lazy"${p.id === 87586 ? ' class="multiply"' : ''}></a>`; }).join('')}</div>
